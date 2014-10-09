@@ -1,0 +1,55 @@
+{
+  "name": "therebelrobot.com",
+  "version": "1.0.0",
+  "description": "A new implementation of my portfolio website. W00t.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/therebelrobot/therebelrobot.com-Oct2014.git"
+  },
+  "keywords": [
+    "portfolio",
+    "software",
+    "engineer",
+    "javascript",
+    "go"
+  ],
+  "author": "Trent Oswald <trentoswald@therebelrobot.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/therebelrobot/therebelrobot.com-Oct2014/issues"
+  },
+  "homepage": "https://github.com/therebelrobot/therebelrobot.com-Oct2014",
+  "dependencies": {
+    "bluebird": "^2.3.5",
+    "brototype": "0.0.2",
+    "browserify": "^6.0.3",
+    "debug": "^2.0.0",
+    "gulp": "^3.8.8",
+    "gulp-concat": "^2.4.1",
+    "gulp-exec": "^2.1.1",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.8.5",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-minify-html": "^0.1.6",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "^1.0.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "hapi": "^6.11.1",
+    "jshint-stylish": "^1.0.0",
+    "lodash": "^2.4.1",
+    "mocha": "^1.21.4",
+    "moment": "^2.8.3",
+    "numeral": "^1.5.3",
+    "page": "^1.3.7",
+    "progress": "^1.1.8",
+    "string-to-js": "0.0.1",
+    "superagent": "^0.20.0",
+    "unirest": "^0.2.7",
+    "yargs": "^1.3.2"
+  }
+}
