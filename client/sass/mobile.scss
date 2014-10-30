@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $MOBILE
+\*------------------------------------*/
+@media handheld, only screen and (max-width: 720px) {
+    .avatar,
+    .content {
+        float: none;
+
+    }
+
+    .avatar img {
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}

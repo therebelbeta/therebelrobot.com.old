@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html {
+    background-color: #f6f9f9;
+    color: #95a4a9;
+}
+body {
+    margin: 10%;
+}
+
+.avatar {
+    float: left;
+    margin: 0 40px 20px 0;
+}
+    .avatar img {
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 125px;
+    }
+
+.content {
+    float: left;
+    width: 300px;
+}
+    .title {
+        font-size: 48px;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+    .social-icons li {
+        display: inline;
+    }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            text-indent: -9999px;
+            width: 24px;
+            height: 24px;
+            opacity:.5;
+        }
+            .twitter {
+                background-image: url(../img/twitter.png);
+            }
+            .facebook {
+                background-image: url(../img/facebook.png);
+            }
+            .github {
+                background-image: url(../img/github.png);
+            }
+            .linkedin {
+                background-image: url(../img/linkedin.png);
+            }
+
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+a img:hover,
+.social-icons a:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
