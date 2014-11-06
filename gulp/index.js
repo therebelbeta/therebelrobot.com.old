@@ -1,5 +1,6 @@
 var brototype = require('brototype');
 var browserify = require('browserify');
+var partialify = require('partialify');
 var concat = require('gulp-concat');
 var debug = require('debug');
 var exec = require('gulp-exec');
@@ -19,7 +20,8 @@ var util = require('gulp-util');
 var yargs = require('yargs');
 
 gulp.task('browserify', ['jshint-client'], function() {
-  return browserify('./client/js/app.js')
+  return browserify('./client/js/client.js')
+    .transform(partialify)
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./server/public/'));
@@ -48,9 +50,6 @@ gulp.task('minifyHTML', function() {
     comments: true,
     spare: true
   };
-  gulp.src(['./client/html/**/*.html', '!./client/html/index.html'])
-    .pipe(minifyHtml(opts))
-    .pipe(gulp.dest('./server/public/templates/'))
   gulp.src('./client/html/index.html')
     .pipe(minifyHtml(opts))
     .pipe(gulp.dest('./server/public/'))
@@ -88,7 +87,9 @@ gulp.task('assets', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('client/js/**/*.js', ['jshint-client', 'browserify']);
+  gulp.watch(['client/js/**/*.js', './client/html/**/*.html',
+    '!./client/html/index.html'
+  ], ['jshint-client', 'browserify']);
   gulp.watch(['server/**/*.js', '!server/public/**'], ['jshint-server']);
   gulp.watch('client/sass/**/*.scss', ['sass']);
   gulp.watch('client/html/**/*.html', ['minifyHTML']);

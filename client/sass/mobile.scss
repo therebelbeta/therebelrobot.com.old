@@ -3,7 +3,7 @@
 \*------------------------------------*/
 @media handheld, only screen and (max-width: 720px) {
     .avatar,
-    .content {
+    .main-content {
         float: none;
 
     }
@@ -13,7 +13,7 @@
         max-height: 125px;
     }
 
-    .content {
+    .main-content {
         width: 100%;
     }
 }

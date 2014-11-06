@@ -1,0 +1,57 @@
+<div class="content content-nav" v-class="
+  index    : currentRoute == '/',
+  projects   : currentRoute == '/projects',
+  blog : currentRoute == '/blog'
+  ">
+  <div class="avatar">
+    <a href="#/" v-on="click:goTo('/')">
+      <img src="img/avatar.png" alt="Avatar">
+    </a>
+    <nav>
+      <a href="#/" v-on="click:goTo('/')">Trent Oswald</a>
+      <a href="#/projects" v-on="click:goTo('/projects')">Projects</a>
+      <a href="#/blog" v-on="click:goTo('/blog')">Blog</a>
+      <ul class="social-icons">
+        <li><a class="github" href="https://github.com/therebelrobot" title="Github">Github</a></li>
+        <li><a class="linkedin" href="https://www.linkedin.com/profile/view?id=62388992" title="LinkedIn">LinkedIn</a></li>
+        <li><a class="twitter" href="https://twitter.com/therebelrobot" title="Twitter">Twitter</a></li>
+        <li><a class="facebook" href="https://www.facebook.com/trent.oswald" title="Facebook">Facebook</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-content">
+    <h1 class="title">Trent Oswald</h1>
+    <h2 class="subtitle">theRebelRobot Development</h2>
+    <p class="subsub">
+    Web architect.<br>
+    Aficionado of Node, Angular, and french toast.<br>
+    Orem, Utah, USA
+    </p>
+    <ul class="social-icons">
+      <li><a class="github" href="https://github.com/therebelrobot" title="Github">Github</a></li>
+      <li><a class="linkedin" href="https://www.linkedin.com/profile/view?id=62388992" title="LinkedIn">LinkedIn</a></li>
+      <li><a class="twitter" href="https://twitter.com/therebelrobot" title="Twitter">Twitter</a></li>
+      <li><a class="facebook" href="https://www.facebook.com/trent.oswald" title="Facebook">Facebook</a></li>
+    </ul>
+    <p class="resume">
+    Resume: <a href="/resume/">HTML</a> | <a href="/resume/Trent-Oswald-Web-Engineer-2014-05.pdf">PDF</a><br>
+    </p>
+    <p class="email">Want to send me a love letter? <a href="mailto:admin@therebelrobot.com">Email me</a>.</p>
+    <p class="projects-link"><a href="#/projects" v-on="click:goTo('/projects')">Projects</a></p>
+    <p class="blog-link"><a href="#/blog" v-on="click:goTo('/blog')">Blog</a></p>
+    </div> <!-- /.main-content -->
+  </div>
+  <div class="content content-projects"  v-class="
+    index    : currentRoute == '/',
+    projects   : currentRoute == '/projects',
+    blog : currentRoute == '/blog'
+    ">
+    Projects
+  </div>
+  <div class="content content-blog" v-class="
+    index    : currentRoute == '/',
+    projects   : currentRoute == '/projects',
+    blog : currentRoute == '/blog'
+    ">
+    Blog
+  </div>

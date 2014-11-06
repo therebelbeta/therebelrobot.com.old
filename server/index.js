@@ -26,6 +26,8 @@ server.get(/\/?.*/, restify.serveStatic({
   directory: './server/public',
   default: 'index.html'
 }));
+
+
 server.listen(3210, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
